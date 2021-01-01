@@ -1,0 +1,17 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#6 \\$server \\(array\\) of method Webparking\\\\OpenAPIValidator\\\\Tests\\\\TestCase\\:\\:call\\(\\) should be compatible with parameter \\$content \\(string\\) of method Orchestra\\\\Testbench\\\\Contracts\\\\TestCase\\:\\:call\\(\\)$#"
+			count: 1
+			path: tests/TestCase.php
+
+		-
+			message: "#^Parameter \\#7 \\$content \\(string\\|null\\) of method Webparking\\\\OpenAPIValidator\\\\Tests\\\\TestCase\\:\\:call\\(\\) should be compatible with parameter \\$changeHistory \\(bool\\) of method Orchestra\\\\Testbench\\\\Contracts\\\\TestCase\\:\\:call\\(\\)$#"
+			count: 1
+			path: tests/TestCase.php
+
+		-
+			message: "#^Return type \\(Illuminate\\\\Testing\\\\TestResponse\\) of method Webparking\\\\OpenAPIValidator\\\\Tests\\\\TestCase\\:\\:call\\(\\) should be compatible with return type \\(Illuminate\\\\Http\\\\Response\\) of method Orchestra\\\\Testbench\\\\Contracts\\\\TestCase\\:\\:call\\(\\)$#"
+			count: 1
+			path: tests/TestCase.php
+
