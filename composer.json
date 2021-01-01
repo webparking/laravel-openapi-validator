@@ -1,0 +1,48 @@
+{
+    "name": "webparking/laravel-openapi-validator",
+    "description": "An OpenAPI documentation validator using your existing Laravel tests",
+    "type": "library",
+    "keywords": ["laravel", "openapi", "validation", "validator", "docs", "documentation", "swagger", "http", "rest", "api"],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Webparking\\OpenAPIValidator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webparking\\OpenAPIValidator\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan analyse --memory-limit=-1",
+        "php-cs-fixer": "vendor/bin/php-cs-fixer fix",
+        "phpunit": "vendor/bin/phpunit",
+        "check-coverage": [
+            "@php vendor/bin/coverage-check coverage.xml 100"
+        ],
+        "test": [
+            "composer php-cs-fixer",
+            "composer phpstan",
+            "@php vendor/bin/phpunit tests --coverage-clover=coverage.xml",
+            "composer check-coverage",
+            "rm coverage.xml"
+        ]
+    },
+    "require-dev": {
+        "nunomaduro/larastan": "^0.6.11",
+        "friendsofphp/php-cs-fixer": "^2.17",
+        "phpstan/extension-installer": "^1.1",
+        "phpunit/phpunit": "^9.5",
+        "rregeer/phpunit-coverage-check": "^0.3.1",
+        "orchestra/testbench": "^6.7"
+    },
+    "require": {
+        "laravel/framework": "^8.20",
+        "league/openapi-psr7-validator": "^0.14.0",
+        "nyholm/psr7": "^1.3",
+        "symfony/psr-http-message-bridge": "^2.0",
+        "php": "^7.4"
+    }
+}
