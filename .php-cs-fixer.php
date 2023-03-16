@@ -8,6 +8,7 @@ return (new PhpCsFixer\Config())
         '@Symfony:risky' => true,
         '@PHP80Migration' => true,
         '@PHP80Migration:risky' => true,
+        '@PHP81Migration' => true,
         'phpdoc_line_span' => [
             'const' => 'single',
             'method' => 'single',
