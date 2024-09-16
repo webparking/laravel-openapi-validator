@@ -36,14 +36,14 @@
         "phpstan/extension-installer": "^1.2",
         "phpunit/phpunit": "^10.0",
         "rregeer/phpunit-coverage-check": "^0.3.1",
-        "orchestra/testbench": "^8.0.0"
+        "orchestra/testbench": "^8.26"
     },
     "require": {
-        "laravel/framework": "^9.0|^10.0",
-        "league/openapi-psr7-validator": "^0.17",
-        "nyholm/psr7": "^1.5",
-        "symfony/psr-http-message-bridge": "^2.1",
-        "php": "^8.1|^8.2"
+        "laravel/framework": "^10.0|^11.0",
+        "league/openapi-psr7-validator": "^0.22",
+        "nyholm/psr7": "^1.8",
+        "symfony/psr-http-message-bridge": "^6.4",
+        "php": "^8.1|^8.2|^8.3"
     },
     "config": {
         "allow-plugins": {

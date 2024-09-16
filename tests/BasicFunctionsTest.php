@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Webparking\OpenAPIValidator\Tests;
 
+use League\OpenAPIValidation\PSR7\Exception\NoOperation;
 use League\OpenAPIValidation\PSR7\Exception\NoPath;
+use League\OpenAPIValidation\PSR7\Exception\NoResponseCode;
 
 final class BasicFunctionsTest extends TestCase
 {
@@ -38,5 +40,26 @@ final class BasicFunctionsTest extends TestCase
         $this
             ->getJson('ignored-endpoint')
             ->assertStatus(404);
+    }
+
+    public function testAssertNoOperation(): void
+    {
+        $this->expectException(NoOperation::class);
+
+        $this
+            ->postJson('documented-endpoint', [
+                'attribute1' => 'value1',
+                'attribute2' => 'value2',
+            ])
+            ->assertStatus(200);
+    }
+
+    public function testAssertNoOperationWithResponseCode(): void
+    {
+        $this->expectException(NoResponseCode::class);
+
+        $this
+            ->getJson('random-endpoint')
+            ->assertStatus(200);
     }
 }
