@@ -8,3 +8,8 @@ paths:
       responses:
         '404':
           description: 'Description of response'
+  /random-endpoint:
+    get:
+      responses:
+        '200':
+          description: 'Description of response'
