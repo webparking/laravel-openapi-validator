@@ -19,6 +19,16 @@ abstract class TestCase extends BaseTestCase
 }
 ```
 
+## Laravel Version Compatibility
+
+The Laravel versions listed below are all currently supported:
+
+Laravel >= 11.x.x on PHP >= 8.3 is supported starting from 3.0.0
+Laravel >= 10.x.x on PHP >= 8.2is supported starting from 2.2.0
+Laravel >= 9.x.x on PHP >= 8.1 is supported starting from 2.1.0
+Laravel >= 8.2.x on PHP >= 8.0 is supported starting from 2.0.0
+
+
 ## The problem
 When creating and maintaining an HTTP REST API, you want to make sure it works well and is well documented. We consider it essential to be able to check both automatically.
 
